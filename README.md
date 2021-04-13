@@ -1,24 +1,41 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## テーブルスキーマ
 
-Things you may want to cover:
+### Taskモデル
+| カラム名 | データ型 | 備考 |
+| ------ | ------ | ------ |
+| id | bigint | タスクID |
+| user_id(FK) | bigint | ユーザーID |
+| label_id(FK) | bigint | ラベルID |
+| priority_id(FK) | bigint | 優先順位ID |
+| status_id(FK) | bigint | ステータスID |
+| title | string | タスク名 |
+| content | text | 内容 |
+| end_period | datetime | 終了期限 |
 
-* Ruby version
+### Userモデル
+| カラム名 | データ型 | 備考 |
+| ------ | ------ | ------ |
+| id | bigint | ユーザーID |
+| name | string | ユーザー名 |
+| email | text | メールアドレス |
+| password_digest | string | パスワード |
 
-* System dependencies
+### Labelモデル
+| カラム名 | データ型 | 備考 |
+| ------ | ------ | ------ |
+| id | bigint | ラベルID |
+| label_name | string | ラベル名 |
 
-* Configuration
+### Statusモデル
+| カラム名 | データ型 | 備考 |
+| ------ | ------ | ------ |
+| id | bigint | ステータスID |
+| status_name | string | ステータス名（未着手・着手・完了） |
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Priorityモデル
+| カラム名 | データ型 | 備考 |
+| ------ | ------ | ------ |
+| id | bigint | 優先順位ID |
+| rank | string | 優先度（高・中・低） |
