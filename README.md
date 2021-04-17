@@ -12,7 +12,7 @@
 | status_id(FK) | bigint | ステータスID |
 | title | string | タスク名 |
 | content | text | 内容 |
-| end_period | datetime | 終了期限 |
+| expired_at | datetime | 終了期限 |
 
 ### Userモデル
 | カラム名 | データ型 | 備考 |
