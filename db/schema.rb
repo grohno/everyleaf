@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2021_04_17_125336) do
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.datetime "expired_at", default: "2021-05-17 13:20:47", null: false
+    t.datetime "expired_at", default: -> { "(now() + '1 mon'::interval)" }, null: false
   end
 
 end
