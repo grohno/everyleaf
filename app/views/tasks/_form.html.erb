@@ -21,6 +21,10 @@
     <%= form.label :expired_at %>
     <%= form.datetime_select :expired_at %>
   </div>
+  <div class="field">
+    <%= form.label :status_id %>
+    <%= form.select :status_id, {'未着手': 1, '着手': 2, '完了': 3} %>
+  </div>
   <div class="actions">
     <%= form.submit %>
   </div>
