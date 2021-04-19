@@ -23,7 +23,7 @@
   </div>
   <div class="field">
     <%= form.label :status_id %>
-    <%= form.select :status_id, {'未着手': 1, '着手': 2, '完了': 3} %>
+    <%= form.select :status_id, options_for_select(Task.status_lists) %>
   </div>
   <div class="actions">
     <%= form.submit %>
