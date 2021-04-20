@@ -10,7 +10,7 @@
     <%= form.label :search_title, "タスク名" %>
     <%= form.text_field :search_title, placeholder: "タスク名で検索" %>
     <%= form.label :search_status, "ステータス" %>
-    <%= form.select :search_status, options_for_select(Task.status_lists), { include_blank: '選択してください'} %>
+    <%= form.select :search_status, Task.statuses.keys, { include_blank: '選択してください'} %>
     <%= form.submit "検索", name: "search" %>
   <% end %>
 </div>
@@ -22,7 +22,7 @@
     <p><span class="item_name">内容</span> <%= task.content %></p>
     <p><span class="item_name">登録日時</span> <%= l task.created_at, format: :long %></p>
     <p><span class="item_name">終了期限</span> <%= l task.expired_at, format: :long %></p>
-    <p><span class="item_name">ステータス</span> <%= task.status.status_name %></p>
+    <p><span class="item_name">ステータス</span> <%= task.status %></p>
     <p class="btns">
       <%= link_to '詳細を確認する', task_path(task.id) %>
       <%= link_to "タスクを編集する", edit_task_path(task.id), data: { confirm: '本当に編集していいですか？' } %>

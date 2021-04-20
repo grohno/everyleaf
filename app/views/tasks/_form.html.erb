@@ -22,8 +22,8 @@
     <%= form.datetime_select :expired_at %>
   </div>
   <div class="field">
-    <%= form.label :status_id %>
-    <%= form.select :status_id, options_for_select(Task.status_lists) %>
+    <%= form.label :status %>
+    <%= form.select :status, Task.statuses.keys %>
   </div>
   <div class="actions">
     <%= form.submit %>
