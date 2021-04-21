@@ -16,6 +16,7 @@
  */
 
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
 /*
 html5doctor.com Reset Stylesheet
@@ -24,7 +25,7 @@ Last Updated: 2010-09-17
 Author: Richard Clark - http://richclarkdesign.com
 Twitter: @rich_clark
 */
-/*
+
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -73,12 +74,12 @@ a {
 }
 ins {
    background-color:#ff9;
-   color:#000;
+   color:#222;
    text-decoration:none;
 }
 mark {
    background-color:#ff9;
-   color:#000;
+   color:#222;
    font-style:italic;
    font-weight:bold;
 }
@@ -120,22 +121,29 @@ img {
        -ms-box-sizing: border-box;
            box-sizing: border-box;
 }
+html {
+  font-size: 62.5%;
+}
 body {
+  font-size: 1.6rem;
 	font-family: Avenir , "Open Sans" , "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" ,  "メイリオ" , Meiryo , "Meiryo UI" , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
-	font-size: 18px;
- line-height: 1.8;
- color: #000;
+   line-height: 1.8;
+   color: #222;
+   background: #fafafa;
 }
 .serif {
- font-family:"Roboto Slab" , Garamond , "Times New Roman" , "ヒラギノ明朝 Pro W3" , "Hiragino Mincho Pro" , "HiraMinProN-W3" , "游明朝" , "Yu Mincho" , "游明朝体" , "YuMincho" , "HGS明朝E" , "ＭＳ Ｐ明朝" , "MS PMincho" , serif;
- font-size: 16px;
+  font-family:"Roboto Slab" , Garamond , "Times New Roman" , "ヒラギノ明朝 Pro W3" , "Hiragino Mincho Pro" , "HiraMinProN-W3" , "游明朝" , "Yu Mincho" , "游明朝体" , "YuMincho" , "HGS明朝E" , "ＭＳ Ｐ明朝" , "MS PMincho" , serif;
+  font-size: 16px;
+}
+.logofont {
+  font-family: 'Audiowide', cursive;
 }
 a {
- color: #000;
+ color: #222;
 	text-decoration:none;
 }
 a:hover {
- color: #000;
+ color: #222;
  opacity: 0.6;
  -webkit-transition: all .5s;
  transition: all .5s;
@@ -162,9 +170,139 @@ img {
 .img {
  text-align: center;
 }
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+article {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.material-icons {
+  vertical-align: middle;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  position: relative;
+  color: white;
+  background: #81d0cb;
+  line-height: 1.4;
+  padding: 0.5em 0.5em 0.5em 2.4em;
+  position: relative;
+}
+h2::before {
+  content:'check_box';
+	font-family: "Material Icons";
+  font-size: 3rem;
+  position: absolute;
+  left : 0.5em;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+}
+#error_explanation {
+  margin-bottom: 40px;
+}
+#error_explanation h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+#error_explanation ul li {
+  list-style-type: disc;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+  border-radius: 6px;
+  font-size: 17px;
+  padding: 10px;
+  border: 1px solid #dddfe2;
+  outline: none;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  border: 1px solid #81d0cb;
+}
+
+/* header */
+header {
+  background: #42ce9f;
+  color: #fff;
+}
+header .container {
+  padding: 20px 10px;
+}
+header h1 {
+  font-size: 4rem;
+  padding-left: 4rem;
+  position: relative;
+}
+header h1 a,
+header h1 a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+header h1::before {
+  content:'pending_actions';
+	font-family: "Material Icons";
+  font-size: 4rem;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+}
+
+/* footer */
+footer {
+  background: #42ce9f;
+  color: #fff;
+}
+footer .container {
+  padding: 20px 10px;
+}
+footer .copyright {
+  text-align: center;
+}
+
+
 @media only screen and (max-width: 768px){
+  body {
+    font-size: 1.4rem;
+    line-height: 1.6;
+  }
   .inner {
      width: 100%;
      padding: 0 10px;
   }
-} */
+  .flex {
+    flex-wrap: wrap;
+  }
+  article {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  header h1 {
+    font-size: 2.4rem;
+    padding-left: 3rem;
+  }
+  header h1::before {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+  }
+  h2::before {
+    font-size: 2.4rem;
+  }
+}
