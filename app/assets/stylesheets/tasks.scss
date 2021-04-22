@@ -1,3 +1,337 @@
 // Place all the styles related to the tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* index */
+
+.tasks_index .task_new {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.tasks_index .task_new a {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: #f6a623;
+  border: 1px solid #fff;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 4px 4px 4px -2px #dadada;
+}
+.tasks_index .task_new a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+.tasks_index .task_nav {
+  background: #f0f6da;
+  border: 1px solid #dddfe2;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+.tasks_index .sort_expired {
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.tasks_index .sort_expired a {
+  position: relative;
+  padding: 5px 10px 5px 3rem;
+  border-radius: 5px;
+  background: #42ce9f;
+  color: #fff;
+  margin-right: 20px;
+}
+.tasks_index .sort_expired a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+.tasks_index .sort_expired a:last-child {
+  margin-right: 0;
+}
+.tasks_index .sort_expired a::before {
+  content:'expand_more';
+	font-family: "Material Icons";
+  font-size: 3rem;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+}
+.tasks_index .search_box {
+  text-align: center;
+}
+.tasks_index .search_box .input {
+  display: inline-block;
+  margin-right: 10px;
+}
+.tasks_index .search_box .input label {
+  color: #888;
+  font-weight: bold;
+}
+.tasks_index .search_box .input input[type="text"] {
+  width: 400px;
+}
+.tasks_index .search_box .input input[type="submit"] {
+  padding: 5px 20px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 5px;
+  background: #c0c0c0;
+  box-shadow: 4px 4px 4px -2px #dadada;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+}
+.tasks_index .search_box .input input[type="submit"]:hover {
+  opacity: 0.6;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+.tasklist li {
+  margin-bottom: 20px;
+  border: 1px solid #dddfe2;
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+}
+.tasklist li p {
+  margin-bottom: 5px;
+}
+.tasklist li p:last-child {
+  margin-bottom: 0;
+}
+.tasklist li .item_name {
+  display: inline-block;
+  line-height: 1;
+  vertical-align: middle;
+  background: #80aba9;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 5px 8px;
+  border-radius: 100px;
+  margin-right: 5px;
+  margin-top: -2px;
+}
+.tasklist li .upper {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.tasklist li .upper p {
+  color: #888;
+  font-weight: bold;
+}
+.tasklist li .lower {
+  margin: 10px 0;
+}
+.tasklist li .lower p {
+  display: inline-block;
+  margin-right: 10px;
+}
+.tasklist .lower p .item_name {
+  background: #bfbfbf;
+}
+.tasklist li .btns {
+  text-align: right;
+}
+.tasklist li .btns a {
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  padding: 3px 10px;
+  margin-right: 10px;
+}
+.tasklist li .btns a:hover {
+  text-decoration: none;
+}
+.tasklist li .btns a.show_task {
+  color: #008db7;
+  border: 1px solid #008db7;
+}
+.tasklist li .btns a.edit_task {
+  color: #f39800;
+  border: 1px solid #f39800;
+}
+.tasklist li .btns a.delete_task {
+  color: #c70067;
+  border: 1px solid #c70067;
+}
+.pagination_block {
+  text-align: center;
+}
+.pagination_block .pagination span {
+  margin: 0 5px;
+}
+.pagination_block .pagination span.page {
+  padding: 5px 4px 5px 8px;
+  margin-left: 5px;
+  border: 1px solid #81d0cb;
+  background:  #81d0cb;
+  color: #fff;
+  line-height: 1;
+  border-radius: 100px;
+}
+.pagination_block .pagination span.page.current {
+  background:  #fff;
+  color: #81d0cb;
+}
+.pagination_block .pagination span.page a {
+  color: #fff;
+}
+.pagination_block .pagination span.page a:hover {
+  text-decoration: none;
+}
+
+/* form */
+
+.form_block .field {
+  margin-bottom: 20px;
+}
+.form_block .field label {
+  font-weight: bold;
+  color: #888;
+  width: 6em;
+}
+.form_block textarea {
+    vertical-align: middle;
+}
+.form_block input[type="text"],
+.form_block textarea {
+  width: 70%;
+}
+.form_block .actions input[type="submit"] {
+  padding: 5px 20px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 5px;
+  background: #f6a623;
+  box-shadow: 4px 4px 4px -2px #dadada;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  margin-bottom: 20px;
+}
+.form_block .actions input[type="submit"]:hover {
+  opacity: 0.6;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+.goto_back {
+  text-align: right;
+}
+.goto_back a {
+  display: inline-block;
+  padding: 5px 20px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 5px;
+  background: #c0c0c0;
+  box-shadow: 4px 4px 4px -2px #dadada;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+}
+.goto_back a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* confirm */
+
+.task_confirm .item_name {
+  color: #888;
+  font-weight: bold;
+  display: inline-block;
+  width: 6em;
+}
+.task_confirm .actions input[type="submit"]:nth-child(2) {
+  background: #c0c0c0;
+}
+
+@media only screen and (max-width: 1199px){
+
+  /* index */
+
+  .tasks_index .search_box .input input[type="text"] {
+    width: 260px;
+  }
+}
+
+@media only screen and (max-width: 768px){
+
+  /* index */
+
+  .tasks_index .sort_expired {
+    justify-content: space-around;
+    margin-bottom: 10px;
+  }
+  .tasks_index .sort_expired a {
+    width: 70%;
+    margin: 0 0 10px 0;
+  }
+  .tasks_index .search_box .input {
+    display: block;
+    margin-right: 0px;
+    margin-bottom: 10px;
+  }
+  .tasks_index .search_box .input input[type="text"] {
+    width: 77%;
+  }
+}
+
+@media only screen and (max-width: 540px){
+
+  /* form */
+
+  .form_block .field label {
+    display: block;
+    width: auto;
+    margin-bottom: 10px;
+  }
+  .form_block input[type="text"],
+  .form_block textarea {
+    width: 100%;
+  }
+  .form_block #task_expired_at_1i {
+    display: block;
+    margin-bottom: 5px;
+    width: 160px;
+  }
+}
+
+@media only screen and (max-width: 500px){
+
+  /* index */
+
+  .tasklist li .lower p {
+    display: block;
+  }
+  .tasklist li .btns .innerblock {
+    display: inline-block;
+  }
+  .tasklist li .btns a {
+    display: block;
+    text-align: center;
+    width: 160px;
+    margin-bottom: 5px;
+  }
+  .tasklist li .btns a:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 320px){
+
+  /* form */
+
+  .form_block select {
+    padding: 5px;
+  }
+}
