@@ -122,9 +122,11 @@ img {
            box-sizing: border-box;
 }
 html {
+  height: 100%;
   font-size: 62.5%;
 }
 body {
+  height: 100%;
   font-size: 1.6rem;
 	font-family: Avenir , "Open Sans" , "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" ,  "メイリオ" , Meiryo , "Meiryo UI" , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
    line-height: 1.8;
@@ -240,13 +242,17 @@ header {
 header .container {
   padding: 20px 10px;
 }
+header .flex {
+  align-items: center;
+}
 header h1 {
   font-size: 4rem;
   padding-left: 4rem;
   position: relative;
 }
 header h1 a,
-header h1 a:hover {
+header h1 a:hover,
+header h1 a:visited {
   color: #fff;
   text-decoration: none;
 }
@@ -260,6 +266,21 @@ header h1::before {
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
+}
+header .btns a {
+  font-size: 1.3rem;
+  font-weight: bold;
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 5px;
+  color: #fff;
+  border: 2px solid #fff;
+  margin-left: 10px;
+}
+header .btns a:hover,
+header .btns a:visited {
+  color: #fff;
+  text-decoration: none;
 }
 
 /* footer */
