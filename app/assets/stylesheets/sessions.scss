@@ -1,0 +1,10 @@
+// Place all the styles related to the sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.session_new .form_block .field label {
+  width: 9em;
+}
+.session_new .form_block input[type="email"],
+.session_new .form_block input[type="password"] {
+  width: 280px;
+}
