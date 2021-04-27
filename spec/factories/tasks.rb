@@ -5,7 +5,6 @@ FactoryBot.define do
     expired_at { '2021-05-1 03:24:00' }
     status { 1 }
     priority { 1 }
-    # association :user
   end
   factory :task2, class: "Task" do
     title { 'task2_title' }
