@@ -133,7 +133,7 @@
   margin-right: 10px;
 }
 .tasklist .lower p .item_name {
-  background: #bfbfbf;
+  background: #939393;
 }
 .tasklist li .btns {
   text-align: right;
@@ -216,6 +216,15 @@
   font-weight: bold;
   border: none;
   margin-bottom: 20px;
+}
+.form_block .field.check_box input {
+  vertical-align: middle;
+  margin: -2px 5px 0 0;
+}
+.form_block .field.check_box label {
+  width: auto;
+  margin-right: 30px;
+  vertical-align: middle;
 }
 .form_block .actions input[type="submit"]:hover {
   opacity: 0.6;
@@ -303,6 +312,9 @@
     display: block;
     margin-bottom: 5px;
     width: 160px;
+  }
+  .form_block .field.check_box label {
+    display: inline-block;
   }
 }
 

@@ -233,7 +233,9 @@ input[type="password"]:focus,
 textarea:focus {
  border: 1px solid #81d0cb;
 }
-
+.label_block .label {
+  padding: 0.3em 0.6em;
+}
 /* header */
 header {
  background: #42ce9f;
