@@ -25,7 +25,7 @@
 .tasks_index .task_nav {
   background: #f0f6da;
   border: 1px solid #dddfe2;
-  padding: 20px;
+  padding: 20px 20px 10px 20px;
   border-radius: 10px;
   margin-bottom: 30px;
 }
@@ -66,13 +66,11 @@
 .tasks_index .search_box .input {
   display: inline-block;
   margin-right: 10px;
+  margin-bottom: 10px;
 }
 .tasks_index .search_box .input label {
   color: #888;
   font-weight: bold;
-}
-.tasks_index .search_box .input input[type="text"] {
-  width: 400px;
 }
 .tasks_index .search_box .input input[type="submit"] {
   padding: 5px 20px;
@@ -133,7 +131,7 @@
   margin-right: 10px;
 }
 .tasklist .lower p .item_name {
-  background: #bfbfbf;
+  background: #939393;
 }
 .tasklist li .btns {
   text-align: right;
@@ -217,6 +215,15 @@
   border: none;
   margin-bottom: 20px;
 }
+.form_block .field.check_box input {
+  vertical-align: middle;
+  margin: -2px 5px 0 0;
+}
+.form_block .field.check_box label {
+  width: auto;
+  margin-right: 30px;
+  vertical-align: middle;
+}
 .form_block .actions input[type="submit"]:hover {
   opacity: 0.6;
   -webkit-transition: all .5s;
@@ -255,15 +262,6 @@
   background: #c0c0c0;
 }
 
-@media only screen and (max-width: 1199px){
-
-  /* index */
-
-  .tasks_index .search_box .input input[type="text"] {
-    width: 260px;
-  }
-}
-
 @media only screen and (max-width: 768px){
 
   /* index */
@@ -279,7 +277,6 @@
   .tasks_index .search_box .input {
     display: block;
     margin-right: 0px;
-    margin-bottom: 10px;
   }
   .tasks_index .search_box .input input[type="text"] {
     width: 77%;
@@ -303,6 +300,9 @@
     display: block;
     margin-bottom: 5px;
     width: 160px;
+  }
+  .form_block .field.check_box label {
+    display: inline-block;
   }
 }
 
